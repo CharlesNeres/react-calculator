@@ -13,6 +13,10 @@ function App() {
     setResult(eval(result));
   }
 
+  function clear() {
+    setResult("0");
+  }
+
   return (
     <div className="container">
       <div className="visor">{result}</div>
@@ -58,7 +62,9 @@ function App() {
       <div className="container-c" onClick={addValue}>
         .
       </div>
-      <div className="container-c">AC</div>
+      <div className="container-c" onClick={clear}>
+        AC
+      </div>
       <div className="container-c" onClick={addValue}>
         +
       </div>
