@@ -9,6 +9,10 @@ function App() {
     );
   }
 
+  function calculate() {
+    setResult(eval(result));
+  }
+
   return (
     <div className="container">
       <div className="visor">{result}</div>
@@ -58,7 +62,9 @@ function App() {
       <div className="container-c" onClick={addValue}>
         +
       </div>
-      <div className="container-c equal">=</div>
+      <div className="container-c equal" onClick={calculate}>
+        =
+      </div>
     </div>
   );
 }
